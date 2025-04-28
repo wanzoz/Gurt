@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lägg till ny fråga</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: '#fraga',
+      height: 300,
+      menubar: true
+    });
+  </script>
+</head>
+<body class="p-4">
+
+  <div class="container">
+    <h3 class="fw-bold mb-4">Lägg till ny fråga</h3>
+
+    <form>
+      <div class="mb-3">
+        <label for="kurs" class="form-label fw-semibold">Välj kurs:</label>
+        <select id="kurs" class="form-select">
+          <option>-- Välj kurs --</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="kategori" class="form-label fw-semibold">Välj kategori:</label>
+        <select id="kategori" class="form-select">
+          <option>-- Välj kategori --</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="fraga" class="form-label fw-semibold">Fråga:</label>
+        <textarea id="fraga"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="bild" class="form-label fw-semibold">Bild (valfritt):</label>
+        <input type="file" id="bild" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="poang" class="form-label fw-semibold">Poäng:</label>
+        <input type="number" id="poang" class="form-control" value="1" min="0">
+      </div>
+
+      <button type="submit" class="btn btn-success">Spara fråga</button>
+      <div class="mt-3">
+        <a href="index.html" class="link-primary">&larr; Tillbaka till instrumentpanelen</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
